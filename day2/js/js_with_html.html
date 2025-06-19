@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Demo Javascript</title>
+    </head>
+    <body>
+        <h1 id="header">HELLO WORLD!</h1>
+        <button type="button" onclick="changetext()">Change Text</button><br>
+        <button type="button" onclick="color()">Change color</button><br>
+        <input type="text" id="name">
+        <button type="button" onclick="addname()">Add To List</button><br>
+        <ul id="list"></ul>
+        <script>
+            var changetext=() => {
+                var text = document.getElementById("header");
+                text.innerHTML =(text.innerHTML==="HELLO WORLD!")? "HELLO TEXT!" : "HELLO WORLD!";
+            }
+            var color=() => {
+                var data = document.getElementById("header");
+                data.style.color="yellow";
+                data.style.fontSize="50px";
+            }
+            var addname= ()=>{
+                var value = document.getElementById("name").value;
+                var li=document.createElement("li");
+                li.innerHTML=value;
+                document.getElementById("list").append(li);
+            }
+        </script>
+    </body>
+</html>

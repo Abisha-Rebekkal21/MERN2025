@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Resume</title>
+        <link rel="stylesheet" type="text/css" href="style1.css">
+    </head>
+    <body>
+        <div class="navbar">
+        <header>
+            <h1>Abisha Rebekkal T
+                <img src="photo.jpg" alt="Abisha"></h1>
+        </header>
+            <a href="index.html">About</a>
+            <a href="#edu">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#Project">Project</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="container">
+            <div class="bio" id="bio">
+                <h2>
+                    Bio Data
+                </h2>
+                <p>
+                    Hello! My name is Abisha Rebekkal T, and I am passionate about full-stack development, web technologies, and creating innovative digital solutions. With a background in IT, I strive to continuously learn, grow, and contribute to impactful projects while positively impacting my community.
+                </p>
+            </div>
+    </div>
+    <div class="container">
+        <div class="bio" id="edu">
+            <h2>Education</h2>
+            <div>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th scope="col">Name of the Instruction</th>
+                            <th scope="col">Class/Semester</th>
+                            <th scope="col">Percentage/CGPA</th>
+                            <th scope="col">Academic year</th>
+                            <th scope="col">Certificate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" rowspan="2">School</th> 
+                            <td rowspan="2">Sri Vidyasaagar Higher Sencondary School</td>
+                            <td>11 th</td>
+                            <td>91%</td>
+                            <td>2021-2022</td>
+                            <td><label for="pdf-popup1" style="cursor: pointer; color: red; text-decoration: underline;">View PDF</label></td>
+                        </tr>
+                        <tr>
+                            <td>12 th</td>
+                            <td>90.8%</td>
+                            <td>2022-2023</td>
+                            <td><label for="pdf-popup2" style="cursor: pointer; color: red; text-decoration: underline;">View PDF</label></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" rowspan="2">College</th>
+                            <td rowspan="2">Kongu Engineering College</td>
+                            <td>1 st sem</td>
+                            <td>8.45</td>
+                            <td rowspan="2">2023-2024</td>
+                            <td><label for="pdf-popup3" style="cursor: pointer; color: red; text-decoration: underline;">View PDF</label></td>                        
+                        </tr>
+                        <tr>
+                            <td>2nd sem</td>
+                            <td>8.49</td>
+                            <td><label for="pdf-popup4" style="cursor: pointer; color: red; text-decoration: underline;">View PDF</label></td>                        
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- Hidden checkboxes for each certificate -->
+                <input type="checkbox" id="pdf-popup1">
+                <div class="popup-container">
+                    <div class="popup-content">
+                        <label for="pdf-popup1" class="close-btn">&times;</label>
+                        <iframe src="10.pdf"></iframe>
+                    </div>
+                </div>
+
+                <input type="checkbox" id="pdf-popup2">
+                <div class="popup-container">
+                    <div class="popup-content">
+                        <label for="pdf-popup1" class="close-btn">&times;</label>
+                        <iframe src="11.pdf"></iframe>
+                    </div>
+                </div>
+
+                <input type="checkbox" id="pdf-popup3">
+                <div class="popup-container">
+                    <div class="popup-content">
+                        <label for="pdf-popup1" class="close-btn">&times;</label>
+                        <iframe src="sem1.pdf"></iframe>
+                    </div>
+                </div>
+
+                <input type="checkbox" id="pdf-popup4">
+                <div class="popup-container">
+                    <div class="popup-content">
+                        <label for="pdf-popup1" class="close-btn">&times;</label>
+                        <iframe src="sem2.pdf"></iframe>
+                    </div>
+                </div>
+    </div>
+    <!-- Skills Section -->
+    <div class="skills" id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming Languages: Proficient in HTML, CSS, C, C++, Python, and Java</li>
+            <li>Database Management: Skilled in MySQL, MongoDB, and PostgreSQL</li>
+            <li>Web Development: Expertise in creating responsive, user-friendly websites</li>
+            <li>Back-End Development: Building scalable server-side applications using APIs</li>
+            <li>Problem-Solving: Strong analytical and debugging skills</li>
+        </ul>
+    </div>
+
+    <!-- Hobbies Section -->
+    <div class="hobbies" id="hobbies">
+        <h2>Hobbies</h2>
+        <ul>
+            <li>Web Development: Exploring and experimenting with new web technologies</li>
+            <li>Coding Challenges: Participating in coding challenges and hackathons</li>
+            <li>Reading: Enjoying books on technology trends and personal development</li>
+        </ul>
+    </div>
+
+    <!-- Project Section -->
+    <div class="Project" id="Project">
+        <h2>Project</h2>
+        <ul>
+            <li>
+            <h4>Mini project</h4>
+                <ol>
+                  <li>Name: Wool Lifecycle Management System</li>
+                  <li>Github link: <a href="https://github.com/Abisha-Rebakkal/wool-lifecycle-management-system.git">Click here</a></li>
+                </ol>
+              </li>
+              <li>
+                <h4>Python</h4>
+                <ol>
+                  <li>Name: Mastermind Game</li>
+                  <li>Github link: <a href="https://github.com/Abisha-Rebakkal/Python-Project.git">Click Here</a></li>
+                </ol>
+              </li>
+              <li>
+                <h4>Data Structure(JAVA)</h4>
+                <ol>
+                  <li>Name: E-Commerence Inventry Management System</li>
+                  <li>Github link: <a href="https://github.com/Abisha-Rebakkal/E-Commerce-Inventry-Management-System.git">Click Here</a></li>
+                </ol>
+                </li>
+        </ul>
+    </div>
+
+    <!-- Contact Information Section -->
+    <div class="contact-info" id="contact">
+        <h2>Contact Information</h2>
+        <p>If you'd like to get in touch with me, feel free to reach out via the following:</p>
+        <ul>
+            <li>Email: abisharebekkalt.23it@kongu.edu</li>
+            <li>Phone: 8270929977</li>
+            <li>LinkedIn: www.linkedin.com/in/abisha-rebekkal-t-530886310</li>
+            <li>GitHub: https://github.com/Abisha-Rebekkal</li>
+        </ul>
+    </div>
+</div>
+
+
+<footer>
+    <p>© 2025 Abisha Rebekkal. All rights reserved.</p>
+</footer>
+            </div>
+    </body>
+</html>

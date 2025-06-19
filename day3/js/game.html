@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Game</title>
+    </head>
+    <body>
+        <h1>Rock Paper Scissor</h1>
+        <h3>Choose any one</h3>
+        <button type="button" onclick="choice('rock')"><img src="rock.png" alt="Rock" height="100px" width="100px"></button>
+        <button type="button" onclick="choice('paper')"><img src="paper.png" alt="Papper" height="100px" width="100px"></button>
+        <button type="button" onclick="choice('scissor')"><img src="scissor.jpeg" alt="Scissor" height="100px" width="100px"></button>
+        <h2 id="user"></h2>
+        <h2 id="computer"></h2>
+        <h2 id="result"></h2>
+        <script>
+            function choice(user_choice){
+                var choice = ['rock', 'paper', 'scissor'];
+                var computer_choice = choice[Math.floor(Math.random()*3)];
+                console.log("Computer Choice : " + computer_choice);
+                var result='';
+                if(user_choice === computer_choice){
+                    result = "Draw 😢";
+                }
+                else if((user_choice === 'paper' && computer_choice === 'rock') || (user_choice === 'scissor' && computer_choice === 'rock') || (user_choice === 'paper' && computer_choice === 'scissor')){
+                    result = "You Win 🏆";
+                }else{
+                    result = "Computer Win 👎";
+                }
+                document.getElementById('user').innerHTML="User choice : "+user_choice;
+                document.getElementById('computer').innerHTML="Computrer Choice : "+computer_choice;
+                document.getElementById('result').innerHTML="Result: "+result;
+
+                //api
+                var details=async()=>{
+                    var responce = await fetch('https://dummyjson.com/users');
+                    var users = await responce.json;
+                    console.log(users);
+                }
+                details();
+            }
+        </script>
+    </body>
+</html>
