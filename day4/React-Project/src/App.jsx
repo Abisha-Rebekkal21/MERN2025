@@ -10,6 +10,7 @@ import Hooks from './pages/Hooks'
 import State from './Hooks/State'
 import Effect from './Hooks/Effect'
 import Effect2 from './Hooks/Effect2'
+import Signup from './pages/Signup'
 function App() {
 
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/skills' element={<Skills/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/signup' element={<Signup/>}/>
         <Route path='/hooks' element={<Hooks/>}/>
         <Route path='/state' element={<State/>}/>
         <Route path='/effect' element={<Effect/>}/>
