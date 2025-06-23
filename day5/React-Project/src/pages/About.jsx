@@ -8,7 +8,9 @@ const About = ({items}) => {
         <ul>
             {items.map((fruits) => (<li>{fruits}</li>))}
         </ul>
+        <center>
         <img src={react} alt="react" height={'100px'} width={'100px'}></img>
+        </center>
     </div>
   )
 }
