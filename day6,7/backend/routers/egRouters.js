@@ -1,13 +1,17 @@
 const express = require('express');
 const router = express.Router();
-const{getRoute, postRoute, putRoute, deleteRoute} = require('../controllers/egControllers.js')
+const{getRoute, signupRoute, putRoute, deleteRoute, getRouterById, loginRoute} = require('../controllers/egControllers.js')
 
-router.get('/get',getRoute)
+router.get('/get',getRoute);
 
-router.post('/post',postRoute)
+router.get('/get/:id',getRouterById);
 
-router.put('/put/:id',putRoute)
+router.post('/signup',signupRoute);
 
-router.delete('/delete/:id',deleteRoute)
+router.post('/login',loginRoute);
+
+router.put('/put/:id',putRoute);
+
+router.delete('/delete/:id',deleteRoute);
 
 module.exports = router;

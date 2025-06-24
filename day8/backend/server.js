@@ -1,8 +1,8 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db')
-const router = require('./routers/egRouters.js')
-const cors = require('cors')
+const todorouter = require('./routers/todoRouters.js')
+const cors = require('cors');
 
 dotenv.config();
 
@@ -14,7 +14,7 @@ const PORT = process.env.PORT;
 
 app.use(express.json());
 
-app.use(router);
+app.use('/todo',todorouter);
 
 connectDB();
 
