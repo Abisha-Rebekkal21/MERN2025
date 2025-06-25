@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios';
+const API = 'http://localhost:4100';
 
 const Todo = () => {
     const [task,setTask]= useState('')
@@ -7,7 +8,7 @@ const Todo = () => {
     const[editing, setediting] = useState(null)
 
     const fetchTodo = async() =>{
-        const response = await axios.get(`http://localhost:4100/todo/`);
+        const response = await axios.get(`${API}/todo/`);
         console.log(response.data);
         setTodo(response.data);
     }
@@ -18,22 +19,22 @@ const Todo = () => {
     const handleAddOREdit = async(e) =>{
         e.preventDefault();
         if(editing){
-            await axios.put(`http://localhost:4100/todo/edit/${editing._id}`,{task})
+            await axios.put(`${API}/todo/edit/${editing._id}`,{task})
         }else{
-            await axios.post(`http://localhost:4100/todo/create/`,{task})
+            await axios.post(`${API}/todo/create/`,{task})
         }
         setediting(null);
         setTask('');
         fetchTodo();
     }
     const handleDelete = async(id) =>{
-        await axios.delete(`http://localhost:4100/todo/delete/${id}`);
+        await axios.delete(`${API}/todo/delete/${id}`);
         fetchTodo();
         fetchTodo();
     }
 
     const handleToggleStatus = async (todo) =>{
-        await axios.put(`http://localhost:4100/todo/edit/${todo._id}`,{
+        await axios.put(`${API}/todo/edit/${todo._id}`,{
             status:!todo.status
         })
         fetchTodo()
@@ -51,7 +52,7 @@ const Todo = () => {
         <ul>
             {todo.map((todos)=>(
                 <li key={todos._id}>
-                    <span onClick={()=>{handleToggleStatus(todos)}} style={{cursor:"pointer", textDecoration:todos.status?"line-through": "none"}}><p>{todos.task}</p></span>
+                    <h3><span onClick={()=>{handleToggleStatus(todos)}} style={{cursor:"pointer", textDecoration:todos.status?"line-through": "none"}}><p>{todos.task}</p></span></h3>
                     <button onClick={()=>{
                         setediting(todos)
                         setTask(todos.task)}}>Edit</button>
